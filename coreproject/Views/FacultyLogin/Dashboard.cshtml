@@ -1,0 +1,43 @@
+﻿@{
+    ViewData["Title"] = "Faculty Dashboard";
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4" style="max-width:700px; margin:auto;">
+        <h2 class="text-center mb-3">Faculty Dashboard</h2>
+        <hr />
+
+        <h2>Hello Faculty, @Context.Session.GetString("Name")</h2>
+
+        <p>Your ID: @Context.Session.GetString("FacultyId")</p>
+        </p>
+
+        <br />
+
+        <h5>Available Actions</h5>
+        <ul class="list-group">
+
+            <li class="list-group-item">
+                <a href="/Attendance/MarkAttendanceList">➤ Mark Attendance</a>
+            </li>
+
+            <li class="list-group-item">
+                <a href="/Attendance/ViewAttendance">➤ View Attendance</a>
+            </li>
+
+            <li class="list-group-item">
+                <a href="/Faculty/Profile">➤ My Profile</a>
+            </li>
+
+            <li class="list-group-item">
+                <a href="/Faculty/EditProfile">➤ Edit Profile</a>
+            </li>
+        </ul>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-danger" href="/Faculty/Logout">Logout</a>
+        </div>
+    </div>
+
+</div>

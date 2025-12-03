@@ -1,0 +1,25 @@
+﻿@model coreproject.Models.FacultyModel
+
+<h2>Edit Faculty</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="FacultyId" />
+
+    <label>Full Name</label>
+    <input asp-for="FullName" class="form-control" />
+
+    <label>Email</label>
+    <input asp-for="Email" class="form-control" />
+
+    <label>Phone</label>
+    <input asp-for="Phone" class="form-control" />
+
+    <label>Department</label>
+    <input asp-for="Department" class="form-control" />
+
+    <button class="btn btn-success mt-3">Save</button>
+
+    <br />
+    <strong style="color:green">@ViewBag.msg</strong>
+</form>

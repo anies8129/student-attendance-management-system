@@ -1,0 +1,47 @@
+﻿@model coreproject.Models.Facultycls
+
+<h2>Add Faculty</h2>
+
+<form method="post">
+
+    <table>
+        <tr>
+            <td>Full Name</td>
+            <td>@Html.TextBoxFor(m => m.FullName, new { @class = "form-control" })</td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(m => m.Email, new { @class = "form-control" })</td>
+        </tr>
+
+        <tr>
+            <td>Phone</td>
+            <td>@Html.TextBoxFor(m => m.Phone, new { @class = "form-control" })</td>
+        </tr>
+
+        <tr>
+            <td>Department</td>
+            <td>@Html.TextBoxFor(m => m.Department, new { @class = "form-control" })</td>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td>@Html.TextBoxFor(m => m.Username, new { @class = "form-control" })</td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td>@Html.PasswordFor(m => m.Password, new { @class = "form-control" })</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Save" class="btn btn-primary" /></td>
+        </tr>
+    </table>
+
+    <br />
+    <span style="color:green; font-weight:bold">@ViewBag.msg</span>
+
+</form>

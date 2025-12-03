@@ -1,0 +1,35 @@
+﻿@model List<coreproject.Models.FacultyModel>
+
+<h2>Manage Faculty</h2>
+
+<a href="/AdminFaculty/Add" class="btn btn-primary mb-3">Add Faculty</a>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Department</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var f in Model)
+        {
+            <tr>
+                <td>@f.FacultyId</td>
+                <td>@f.FullName</td>
+                <td>@f.Email</td>
+                <td>@f.Phone</td>
+                <td>@f.Department</td>
+                <td>
+                    <a href="/AdminFaculty/Edit?id=@f.FacultyId" class="btn btn-success">Edit</a>
+                    <a href="/AdminFaculty/Delete?id=@f.FacultyId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

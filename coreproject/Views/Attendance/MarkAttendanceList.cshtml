@@ -1,0 +1,32 @@
+﻿@model List<coreproject.Models.Studentcls>
+
+<h2>Mark Attendance</h2>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Student ID</th>
+            <th>Full Name</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var s in Model)
+        {
+            <tr>
+                <td>@s.StudentId</td>
+                <td>@s.FullName</td>
+                <td>
+                    <a href="/Attendance/MarkPresent?id=@s.StudentId" class="btn btn-success btn-sm">
+                        Present
+                    </a>
+
+                    <a href="/Attendance/MarkAbsent?id=@s.StudentId" class="btn btn-danger btn-sm">
+                        Absent
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

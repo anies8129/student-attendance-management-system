@@ -1,0 +1,41 @@
+﻿@model coreproject.Models.Admin
+
+<h2>Admin Registration</h2>
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>@Html.TextBoxFor(m => m.name)</td>
+        </tr>
+
+        <tr>
+            <td>Email</td>
+            <td>@Html.TextBoxFor(m => m.email)</td>
+        </tr>
+
+        <tr>
+            <td>Phone</td>
+            <td>@Html.TextBoxFor(m => m.phone)</td>
+        </tr>
+
+        <tr>
+            <td>Username</td>
+            <td>@Html.TextBoxFor(m => m.username)</td>
+        </tr>
+
+        <tr>
+            <td>Password</td>
+            <td>@Html.PasswordFor(m => m.password)</td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Register" /></td>
+        </tr>
+    </table>
+
+    <br />
+    <span style="color:green; font-weight:bold">@ViewBag.message</span>
+}

@@ -1,0 +1,23 @@
+﻿@model coreproject.Models.Studentcls
+
+<h2>Add Student</h2>
+
+<form method="post">
+
+    <label>Full Name</label>
+    <input asp-for="FullName" class="form-control" />
+
+    <label>Email</label>
+    <input asp-for="Email" class="form-control" />
+
+    <label>Phone</label>
+    <input asp-for="Phone" class="form-control" />
+
+    <label>Department</label>
+    <input asp-for="Department" class="form-control" />
+
+    <button type="submit" class="btn btn-primary mt-3">Add</button>
+
+    <br />
+    <span style="color:green">@ViewBag.msg</span>
+</form>

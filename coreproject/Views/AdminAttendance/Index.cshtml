@@ -1,0 +1,59 @@
+﻿@model List<coreproject.Models.AdminAttendanceModel>
+
+<h2>Attendance Records</h2>
+
+<form method="post" class="row mb-4">
+
+    <div class="col-md-3">
+        <label>Student ID</label>
+        <input type="number" name="studentid" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label>Faculty ID</label>
+        <input type="number" name="facultyid" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label>Department</label>
+        <input type="text" name="department" class="form-control" />
+    </div>
+
+    <div class="col-md-3">
+        <label>Date</label>
+        <input type="date" name="date" class="form-control" />
+    </div>
+
+    <div class="col-md-12 mt-3">
+        <button class="btn btn-primary">Apply Filters</button>
+        <a href="/AdminAttendance/Index" class="btn btn-secondary">Reset</a>
+    </div>
+</form>
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Faculty</th>
+            <th>Student</th>
+            <th>Department</th>
+            <th>Status</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.AttendanceId</td>
+                <td>@a.FacultyName</td>
+                <td>@a.StudentName (@a.StudentId)</td>
+                <td>@a.Department</td>
+                <td>@a.Status</td>
+                <td>@a.Date</td>
+            </tr>
+        }
+    </tbody>
+</table>

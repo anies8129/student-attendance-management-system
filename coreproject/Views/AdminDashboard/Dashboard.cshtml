@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<div class="container mt-5">
+
+    <div class="card shadow p-4" style="max-width:700px; margin:auto;">
+        <h2 class="text-center mb-3">Admin Dashboard</h2>
+
+        <hr />
+
+        <h2>Welcome, @Context.Session.GetString("Name")</h2>
+        <p>Welcome to the Admin Panel</p>
+
+        <div class="mt-4">
+            <h5>Available Actions</h5>
+            <ul class="list-group">
+                <li class="list-group-item">
+                    <a href="/Student/AddStudent">➤ Add Student</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/AdminStudent/Index">➤ Student Management</a>
+                </li>
+
+                <li class="list-group-item">
+                    <a href="/Faculty/AddFaculty">➤ Add Faculty</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/AdminFaculty/Index">➤ Faculty Management</a>
+                </li>
+                <li class="list-group-item">
+                    <a href="/AdminAttendance/Index">➤ Attendance Management</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="text-center mt-4">
+            <a href="/Admin/Logout" class="btn btn-danger">Logout</a>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,37 @@
+﻿@model List<coreproject.Models.AttendanceViewModel>
+
+<h2>Attendance List</h2>
+
+<table class="table table-bordered table-striped mt-3">
+    <thead class="table-dark">
+        <tr>
+            <th>Attendance ID</th>
+            <th>Student ID</th>
+            <th>Student Name</th>
+            <th>Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var a in Model)
+        {
+            <tr>
+                <td>@a.AttendanceId</td>
+                <td>@a.StudentId</td>
+                <td>@a.StudentName</td>
+                <td>@a.Date.ToString("dd-MM-yyyy")</td>
+                <td>
+                    @if (a.Status == "Present")
+                    {
+                        <span class="badge bg-success">Present</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-danger">Absent</span>
+                    }
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

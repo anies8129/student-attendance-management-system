@@ -1,0 +1,30 @@
+﻿@model coreproject.Models.Studentcls
+
+<h2>Edit Student</h2>
+
+<form method="post">
+
+    <input type="hidden" asp-for="StudentId" />
+
+    <label>Full Name</label>
+    <input asp-for="FullName" class="form-control" />
+
+    <label>Email</label>
+    <input asp-for="Email" class="form-control" />
+
+    <label>Phone</label>
+    <input asp-for="Phone" class="form-control" />
+
+    <label>Department</label>
+    <input asp-for="Department" class="form-control" />
+
+    <button type="submit" class="btn btn-success mt-3">Save</button>
+
+    <br />
+    <span style="color:green">@ViewBag.msg</span>
+</form>
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
